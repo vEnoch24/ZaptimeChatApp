@@ -1,0 +1,49 @@
+﻿@if(SelectedUser is null)
+{
+    <h2>Please select a user from the connected users list, to start a conversation</h2>
+}
+else
+{
+    <div class="flex-grow-1 d-flex flex-column">
+        <div class="header d-flex justify-content-between bg-main">
+            <h2 class="text-white">@SelectedUser.Name</h2>
+            <button class="btn btn-danger btn-sm" @onclick="HandleCancelClick"  >x</button>
+        </div>
+        <div class="message-list flex-grow-1">
+
+            
+        </div>
+        <div class="message-input">
+
+            <EditForm Model="newMessage">
+                <div class="">
+                    <InputText @bind-Value="newMessage" placeholder="Enter message here..." class="form-control" />
+                    <button class="btn btn-success" type="submit" >Send</button>
+                </div>
+            </EditForm>
+
+        </div>
+    </div>
+}
+ 
+
+
+
+@code {
+    [Parameter]
+    public UserDto? SelectedUser { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnCancel { get; set; }
+
+    private IList<string> messages = new List<string>();
+    private string newMessage = "";
+
+
+    private async Task HandleCancelClick()
+    {
+        var isUserHasMessages = messages.Any();
+        var shouldRemoveFromChatList = !isUserHasMessages;
+        await OnCancel.InvokeAsync(shouldRemoveFromChatList);
+    }
+}

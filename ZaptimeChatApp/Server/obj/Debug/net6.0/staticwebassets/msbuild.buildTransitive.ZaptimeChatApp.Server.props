@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ZaptimeChatApp.Server.props" />
+</Project>
