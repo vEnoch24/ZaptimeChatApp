@@ -36,23 +36,17 @@ namespace ZaptimeChatApp.Server.Data.Migrations
                     b.Property<Guid>("FromId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("FromUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("SentOn")
                         .HasColumnType("datetime2");
 
                     b.Property<Guid>("ToId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ToUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("FromUserId");
+                    b.HasIndex("FromId");
 
-                    b.HasIndex("ToUserId");
+                    b.HasIndex("ToId");
 
                     b.ToTable("Messages");
                 });
@@ -94,13 +88,13 @@ namespace ZaptimeChatApp.Server.Data.Migrations
                 {
                     b.HasOne("ZaptimeChatApp.Server.Data.Models.User", "FromUser")
                         .WithMany()
-                        .HasForeignKey("FromUserId")
+                        .HasForeignKey("FromId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ZaptimeChatApp.Server.Data.Models.User", "ToUser")
                         .WithMany()
-                        .HasForeignKey("ToUserId")
+                        .HasForeignKey("ToId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 

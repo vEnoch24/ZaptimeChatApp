@@ -12,5 +12,6 @@ namespace ZaptimeChatApp.Shared
         Task UserConnected(UserDto user);
         Task OnlineUsersList(IEnumerable<UserDto> users);
         Task UserIsOnline(Guid userId);
+        Task MessageReceived(MessageDto messageDto);
     }
 }

@@ -35,7 +35,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <InputText @bind-Value="RegisterModel.Password" DisplayName="Password" class="form-control" placeholder="Enter Password" />
+                            <InputText @bind-Value="RegisterModel.Password" DisplayName="Password" type="password" class="form-control" placeholder="Enter Password" />
                             <ValidationMessage For="() => RegisterModel.Password" />
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                             }
                             else
                             {
-                                <button type="submit" class="btn btn-success float-start" >Register</button>
+                                <button type="submit" class="btn btn-success float-start"> Register </button>
                             }
                                                         
                             <div class="clearfix"></div>

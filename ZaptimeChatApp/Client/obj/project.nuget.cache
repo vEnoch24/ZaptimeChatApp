@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SK+8Qn04Tq5bHPtmXXnYxuO90f5eT7IGJS9oWRkt5c/NCk8R/TDiqOqVSHDfFIejcXOkbhLdnd3NLPZXweepBw==",
+  "dgSpecHash": "Rzn2lTG7AATlRHP995vKZpTDMV79snLcVfsjxoOQatZP3+KjdXf50m9s/ydKUeYLIpkC2XyPZ1D3jj6i9Ruhpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\ZaptimeChatApp.Client.csproj",
   "expectedPackageFiles": [
@@ -34,9 +34,14 @@
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.5.2\\microsoft.identitymodel.abstractions.7.5.2.nupkg.sha512",
+    "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.5.2\\microsoft.identitymodel.jsonwebtokens.7.5.2.nupkg.sha512",
+    "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.identitymodel.logging\\7.5.2\\microsoft.identitymodel.logging.7.5.2.nupkg.sha512",
+    "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.2\\microsoft.identitymodel.tokens.7.5.2.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.jsinterop\\6.0.11\\microsoft.jsinterop.6.0.11.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.11\\microsoft.jsinterop.webassembly.6.0.11.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Enoch\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.5.2\\system.identitymodel.tokens.jwt.7.5.2.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",

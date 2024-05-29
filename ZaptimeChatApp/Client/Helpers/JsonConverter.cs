@@ -7,6 +7,7 @@ namespace ZaptimeChatApp.Client.Helpers
         public static JsonSerializerOptions JsonSerializerOptions => new()
         {
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            //PropertyNameCaseInsensitive = true,
         };
 
         public static string Serialize(object value, JsonSerializerOptions? jsonSerializerOptions = null)

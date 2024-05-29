@@ -1,6 +1,7 @@
 ﻿@page "/chat"
 @using Microsoft.AspNetCore.SignalR.Client;
 @using System.Net.Http.Headers
+@using System.IdentityModel.Tokens.Jwt;
 @inject HttpClient Client
 
 @implements IAsyncDisposable
@@ -10,7 +11,7 @@
 
 
 <div class="container-fluid">
-    <div class="card">
+    <div class="card br-0 mt-1">
         <div class="card-header br-0 bg-primary text-white">
             <div class="row">
                 <div class="col">
@@ -26,11 +27,14 @@
         <div class="card-body messages-window bg-light d-flex">
             <div class="row" style="flex: 1">
                 <div class="col-sm-2 col-3">
-                    <ChatsList Chats="Chats"  OnUserSelected="OnUserSelected"/>
+                    <ChatsList Loading="loadingUsers" Chats="Chats" OnUserSelected="OnUserSelected" />
                 </div>
                 @*<div class="col-sm-8 col-6 d-flex justify-content-center align-items-center" style="background-color: #f4ecff;">*@
-                <div class="col-sm-8 col-6 d-flex px-0" style="background-color: #f4ecff;">
-                    <ChatDetails SelectedUser="selectedUser" OnCancel="HandleChatDetailsCancel" />
+                <div class="col-sm-8 col-6 d-flex px-0" >
+                    <ChatDetails SelectedUser="selectedUser" 
+                        NewIncomingMessage="@newIncomingMessage" 
+                        OnIncomingMessageReceived="() => newIncomingMessage = null" 
+                        OnCancel="HandleChatDetailsCancel" />
                 </div>
                 <div class="col-sm-2 col-3">
                    <UserList Loading="loadingUsers" Users="Users" OnUserSelected="OnUserSelected" />
@@ -48,9 +52,22 @@
 
     private bool loadingUsers = false;
     public ICollection<UserDto> Users { get; set; } = new HashSet<UserDto>();
-    public ICollection<UserDto> Chats { get; set; } = new HashSet<UserDto>();
+    public IList<UserDto> Chats { get; set; } = new List<UserDto>();
 
     private UserDto? selectedUser =  null;
+    private MessageDto? newIncomingMessage = null;
+
+
+    private async Task<bool> IsTokenExpiredAsync()
+    {
+        var jwt = new JwtSecurityToken(AuthenticationState.Token);
+        if (jwt.ValidTo <= DateTime.Now)
+        {
+            return true;
+        }
+
+        return false;
+    }
 
     protected override async void OnInitialized()
     {
@@ -62,22 +79,33 @@
         }
         else
         {
-            hubConnection = ConfigureHubConnection();
-
-            loadingUsers = true;
-            var userListTask = GetClient().GetFromJsonAsync<ICollection<UserDto>>("api/users", JsonConverter.JsonSerializerOptions);
-
-            await hubConnection.StartAsync();
-
-            var userList = await userListTask;
-            if(userList is not null)
+            if(!await IsTokenExpiredAsync())
             {
-                Users = userList;
+                hubConnection = ConfigureHubConnection();
+
+                loadingUsers = true;
+                var userListTask = GetClient().GetFromJsonAsync<ICollection<UserDto>>("api/users", JsonConverter.JsonSerializerOptions);
+                var chatListTask = GetClient().GetFromJsonAsync<IList<UserDto>>("api/users/chats", JsonConverter.JsonSerializerOptions);
+
+                await hubConnection.StartAsync();
+
+                var userList = await userListTask;
+                if (userList is not null)
+                {
+                    Users = userList;
+                }
+
+                var chatList = await chatListTask;
+                if (chatList is not null)
+                {
+                    Chats = chatList;
+                }
+
+                loadingUsers = false;
+                await hubConnection.SendAsync(nameof(IZaptimeChatHubServer.SetUserOnline), AuthenticationState.User);
+                StateHasChanged();
             }
 
-            loadingUsers = false;
-            await hubConnection.SendAsync(nameof(IZaptimeChatHubServer.SetUserOnline), AuthenticationState.User);
-            StateHasChanged();
         }
     }
 
@@ -160,6 +188,26 @@
                 user.IsOnline = true;
                 StateHasChanged();
             }
+        });
+
+        hubConnection.On<MessageDto>(nameof(IZaptimeChatHubClient.MessageReceived), (messageDto) =>
+        {
+            var fromUser = Users.FirstOrDefault(u => u.Id == messageDto.FromUserId);
+
+            if (!Chats.Any(c => c.Id == messageDto.FromUserId))
+            {
+                Chats.Insert(0, fromUser!);
+            }
+            else
+            {
+                if (selectedUser?.Id == messageDto.FromUserId)
+                {
+                    //Append the message
+                    //newIncomingMessage = new MessageDto(messageDto.ToUserId, messageDto.FromUserId, messageDto.Message);
+                    newIncomingMessage = messageDto;
+                }
+            }
+            StateHasChanged();
         });
 
         return hubConnection;

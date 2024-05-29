@@ -1,6 +1,11 @@
 
 .messages-window[b-dyx6l7izga] {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 75px);
+}
+
+.topbar-name[b-dyx6l7izga] {
+    border: 1px solid #5e10d2;
+    padding: 2px 5px;
 }
 
 /*element.style{

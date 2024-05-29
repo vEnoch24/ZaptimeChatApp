@@ -1,0 +1,32 @@
+
+.message-list[b-su9x9oohqu] {
+    height: calc(100vh - 75px - 115px);
+    overflow-y: auto;
+    background-color: #f4ecff;
+}
+
+.single-msg[b-su9x9oohqu] {
+    border: 1px solid lightgray;
+    padding: 4px 10px;
+    border-radius: 25px;
+}
+
+.me[b-su9x9oohqu] {
+    border-bottom-right-radius: 0;
+    background-color: #b7efd5;
+}
+
+.other[b-su9x9oohqu] {
+    border-bottom-left-radius: 0;
+    background-color: #b9ecf6;
+}
+
+.msg-dt[b-su9x9oohqu] {
+    font-size: 12px;
+}
+
+.me .msg-dt[b-su9x9oohqu] {
+    display: block;
+    width: 100%;
+    text-align: right;
+}

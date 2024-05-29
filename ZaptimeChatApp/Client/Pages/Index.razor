@@ -4,6 +4,7 @@
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JsRuntime
 
+
 <PageTitle>Zaptime Chat - Login</PageTitle>
 
 <div class="container">
@@ -29,7 +30,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password</label>
-                            <InputText @bind-Value="LoginModel.Password" DisplayName="Password" class="form-control" placeholder="Enter Password" />
+                            <InputText @bind-Value="LoginModel.Password" DisplayName="Password" type="password" class="form-control" placeholder="Enter Password" />
                             <ValidationMessage For="() => LoginModel.Password" />
                         </div>
                     </div>
