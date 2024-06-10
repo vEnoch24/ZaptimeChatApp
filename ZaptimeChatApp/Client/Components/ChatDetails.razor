@@ -53,6 +53,13 @@ else
                                 }
 
                             </small>
+                            <br>
+                            <small>
+                                @if(!incoming)
+                                {
+                                    <span>@msg.Status</span>
+                                }
+                            </small>
                         </p>
                     </li>
                 }
@@ -61,12 +68,19 @@ else
         </div>
         <div class="message-input">
 
+            @*<div class="">
+                <div class="input-group">
+                    <InputText @bind-Value="newMessage" placeholder="Enter message here..." class="form-control" />
+                    <button class="btn btn-success" @onclick="HandleSendMessageSubmit" >Send</button>
+                </div>
+            </div>*@
+
             <EditForm Model="newMessage" OnValidSubmit="HandleSendMessageSubmit">
                 <div class="">
                     <div class="input-group">
                         <InputText @bind-Value="newMessage" placeholder="Enter message here..." class="form-control" />
                         <button class="btn btn-success" type="submit">Send</button>
-                    </div>    
+                    </div>
                 </div>
             </EditForm>
 
@@ -115,16 +129,30 @@ else
     {
         if (NewIncomingMessage is not null)
         {
-            messages.Add(NewIncomingMessage);
+            var updatedMessage = NewIncomingMessage;
+            if (SelectedUser is not null && NewIncomingMessage.ToUserId == SelectedUser.Id)
+            {
+                updatedMessage = NewIncomingMessage with { Status = "Seen" };
+            }
+
+            messages.Add(updatedMessage);
             await OnIncomingMessageReceived.InvokeAsync();
+
             scrollToBottom = true;
         }
         if(SelectedUser is not null && SelectedUser.Id != previousSelectedUserId)
         {
             previousSelectedUserId = SelectedUser.Id;
+            //var response = await GetClient().PutAsJsonAsync($"api/message/read-message/{SelectedUser.Id}", JsonConverter.JsonSerializerOptions);
+            //if(response.IsSuccessStatusCode)
+            //{
+            //    StateHasChanged();
+            //}
             await LoadMessageAsync();
             scrollToBottom = true;
         }
+
+        StateHasChanged();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -174,7 +202,7 @@ else
             var response = await GetClient().PostAsJsonAsync("api/message/send-message", sendMessageDto, JsonConverter.JsonSerializerOptions);
             if(response.IsSuccessStatusCode)
             {
-                var messageDto = new MessageDto(SelectedUser!.Id, AuthenticationState.User.Id, newMessage, DateTime.Now);
+                var messageDto = new MessageDto(SelectedUser!.Id, AuthenticationState.User.Id, newMessage, DateTime.Now, "Sent");
                 messages.Add(messageDto);
                 scrollToBottom = true;
                 newMessage = "";

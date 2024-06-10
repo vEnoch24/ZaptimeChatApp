@@ -8,6 +8,7 @@
 
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JsRuntime
+@inject IToastService toastService
 
 
 <div class="container-fluid">
@@ -136,6 +137,13 @@
         {
             chatUser.IsSelected = true;
         }
+
+        var response = await GetClient().PutAsJsonAsync($"api/message/read-message/{user.Id}", JsonConverter.JsonSerializerOptions);
+        if (response.IsSuccessStatusCode)
+        {
+            await JsRuntime.InvokeVoidAsync("console.log", "State Changed");
+            StateHasChanged();
+        }
     } 
 
     private async Task HandleChatDetailsCancel(bool shouldRemoveFromChatsList)
@@ -148,6 +156,8 @@
 
     private async Task HandleLogout()
     {
+        await hubConnection.SendAsync(nameof(IZaptimeChatHubServer.SetUserOffline), AuthenticationState.User);
+        //await hubConnection.InvokeAsync("SetUserOffline", Users);
         await JsRuntime.InvokeVoidAsync("window.removeFromStorage", AuthenticationState.AuthStoreKey);
         AuthenticationState.UnLoadState();
         //NavigationManager.NavigateTo("/");
@@ -186,6 +196,17 @@
             if(user is not null)
             {
                 user.IsOnline = true;
+                toastService.ShowInfo($"{user.Name} is online");
+                StateHasChanged();
+            }
+        });
+        hubConnection.On<Guid>(nameof(IZaptimeChatHubClient.UserIsOffline), (userId) =>
+        {
+            var user = Users.FirstOrDefault(u => u.Id == userId);
+            if (user is not null)
+            {
+                user.IsOnline = false;
+                toastService.ShowInfo($"{user.Name} is offline");
                 StateHasChanged();
             }
         });
@@ -204,7 +225,12 @@
                 {
                     //Append the message
                     //newIncomingMessage = new MessageDto(messageDto.ToUserId, messageDto.FromUserId, messageDto.Message);
+                    //messageDto = messageDto with { Status = "Seen" };
                     newIncomingMessage = messageDto;
+                }
+                else
+                {
+                    messageDto = messageDto with { Status = "Sent" };
                 }
             }
             StateHasChanged();

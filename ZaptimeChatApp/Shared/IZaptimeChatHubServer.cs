@@ -10,5 +10,6 @@ namespace ZaptimeChatApp.Shared
     public interface IZaptimeChatHubServer
     {
         Task SetUserOnline(UserDto user);
+        Task SetUserOffline(UserDto user);
     }
 }

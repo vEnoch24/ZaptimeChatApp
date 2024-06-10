@@ -1,3 +1,4 @@
+using Blazored.Toast;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,6 @@ using ZaptimeChatApp.Server.Hubs;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddAuthentication(options => 
@@ -47,6 +47,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddTransient<TokenService>();
 builder.Services.AddDbContext<ZaptimeChatDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("ZaptimeChatDB")));
 builder.Services.AddSignalR();
+builder.Services.AddBlazoredToast();
 
 var app = builder.Build();
 

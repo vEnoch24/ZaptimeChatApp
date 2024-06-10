@@ -97,3 +97,4 @@ C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Server\bin\Debug\net6.
 C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Server\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
 C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Server\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Server\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Server\bin\Debug\net6.0\Blazored.Toast.dll

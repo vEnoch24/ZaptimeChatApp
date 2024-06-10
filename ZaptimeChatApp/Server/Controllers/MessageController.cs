@@ -33,13 +33,14 @@ namespace ZaptimeChatApp.Server.Controllers
                 FromId = base.UserId,
                 ToId = messageDto.ToUserId,
                 Content = messageDto.Message,
-                SentOn = DateTime.Now
+                SentOn = DateTime.Now,
+                Status = "Sent"
             };
 
             await _chatContext.Messages.AddAsync(message, cancellationToken);
             if(await _chatContext.SaveChangesAsync(cancellationToken) > 0)
             {
-                var responseMessageDto = new MessageDto(message.ToId, message.FromId, message.Content, message.SentOn);
+                var responseMessageDto = new MessageDto(message.ToId, message.FromId, message.Content, message.SentOn, message.Status);
                 await _hubContext.Clients.User(messageDto.ToUserId.ToString())
                         .MessageReceived(responseMessageDto);
                 return Ok();
@@ -57,10 +58,31 @@ namespace ZaptimeChatApp.Server.Controllers
                             .Where( m => 
                             (m.FromId == otherUserId && m.ToId == UserId) || (m.ToId == otherUserId && m.FromId == UserId)
                             )
-                            .Select(m => new MessageDto(m.ToId, m.FromId, m.Content, m.SentOn))
+                            .Select(m => new MessageDto(m.ToId, m.FromId, m.Content, m.SentOn, m.Status))
                             .ToListAsync(cancellationToken);
 
             return messages;
+        }
+
+        [HttpPut("read-message/{userId:Guid}")]
+        public async Task<IActionResult> ReadMessage(Guid userId, CancellationToken cancellationToken)
+        {
+            var message = await _chatContext.Messages.AsNoTracking().Where(u => u.ToId == userId).FirstOrDefaultAsync();
+
+            if(message != null)
+            {
+                message.Status = "Seen";
+            }
+            else
+            {
+                return BadRequest();
+            }
+            
+            _chatContext.Messages.Update(message);
+            await _chatContext.SaveChangesAsync(cancellationToken);
+
+            return Ok();
+           
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jhOZkwAT2Nsw3/wdR0xCbMZP5ZMcf8BqqiPT5YXPlhc=",
+  "Hash": "x/PCaewDWdt38NngL812zRmKyGB5LgkxWpHe604b4lY=",
   "Source": "ZaptimeChatApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Enoch\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\Blazored.Toast.bundle.scp.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Enoch\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "Blazored.Toast.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\blazored.toast\\4.2.1\\staticwebassets\\Blazored.Toast.bundle.scp.css"
+    },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
       "SourceId": "ZaptimeChatApp.Client",
@@ -49,6 +66,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.11\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.Toast.dll",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Toast.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\blazored.toast\\4.2.1\\lib\\net6.0\\Blazored.Toast.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.13.83ebseycgu.js",
@@ -184,7 +218,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.11\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.27\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -201,7 +235,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.11\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.27\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -218,7 +252,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.11\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.27\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
@@ -235,7 +269,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.11\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.27\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
@@ -320,7 +354,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.11\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.27\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll",
@@ -745,7 +779,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.jsinterop\\6.0.11\\lib\\net6.0\\Microsoft.JSInterop.dll"
+      "OriginalItemSpec": "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.jsinterop\\6.0.27\\lib\\net6.0\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll",
@@ -3740,6 +3774,23 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.Serialization.Xml.dll"
     },
     {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\0uDsuXQN.gz",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\127ALt2P.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -3874,23 +3925,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Core.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\2WkJuqMl.gz",
-      "SourceId": "ZaptimeChatApp.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\3d56SBUB.gz",
@@ -4590,6 +4624,23 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Tasks.dll"
     },
     {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\d1vfbkkY.gz",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
+    },
+    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\Dcq3IeYn.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -4964,6 +5015,23 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll"
     },
     {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\gfhoiXli.gz",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\GgJPoZtO.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -4996,6 +5064,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\GlK6VlXH.gz",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\hFTHmExk.gz",
@@ -5304,23 +5389,6 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Resources.Reader.dll"
     },
     {
-      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\kJRz3EI5.gz",
-      "SourceId": "ZaptimeChatApp.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
-    },
-    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\KPEgG37B.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -5576,6 +5644,23 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Features.dll"
     },
     {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\n5VsHOlP.gz",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\nfElZt1y.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -5814,6 +5899,23 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\PteGuvpp.gz",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
+    },
+    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\PU0a++iE.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -6018,23 +6120,6 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.dll"
     },
     {
-      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\qwtNoezd.gz",
-      "SourceId": "ZaptimeChatApp.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
-    },
-    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\qxMPqqbA.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -6118,23 +6203,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ValueTuple.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\rsBcYD9l.gz",
-      "SourceId": "ZaptimeChatApp.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\RWtpmKX8.gz",
@@ -6237,23 +6305,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.WebSockets.Client.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\SOLAZ3h4.gz",
-      "SourceId": "ZaptimeChatApp.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\srp+F2Nf.gz",
@@ -6647,6 +6698,23 @@
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Drawing.dll"
     },
     {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\UqyUaHXE.gz",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.Toast.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.Toast.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.Toast.dll"
+    },
+    {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\usF1LfsS.gz",
       "SourceId": "ZaptimeChatApp.Client",
       "SourceType": "Computed",
@@ -7036,23 +7104,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Tasks.Extensions.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\Yf88sXSE.gz",
-      "SourceId": "ZaptimeChatApp.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\obj\\Debug\\net6.0\\build-gz\\YNtqoI8a.gz",

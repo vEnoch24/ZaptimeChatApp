@@ -39,6 +39,10 @@ namespace ZaptimeChatApp.Server.Data.Migrations
                     b.Property<DateTime>("SentOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("ToId")
                         .HasColumnType("uniqueidentifier");
 

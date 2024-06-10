@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
+using ZaptimeChatApp.Server.Data.Models;
 using ZaptimeChatApp.Shared;
 using ZaptimeChatApp.Shared.DTOs;
 
@@ -29,6 +30,16 @@ namespace ZaptimeChatApp.Server.Hubs
                 onlineUsers.Add(user.Id, user);
                 await Clients.Others.UserIsOnline(user.Id);
             }   
+        }
+
+        public async Task SetUserOffline(UserDto User)
+        {
+
+            if (onlineUsers.ContainsKey(User.Id))
+            {
+                await Clients.Others.UserIsOffline(User.Id);
+                onlineUsers.Remove(User.Id);
+            }
         }
     }
 }

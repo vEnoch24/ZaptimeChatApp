@@ -17,5 +17,6 @@ namespace ZaptimeChatApp.Server.Data.Models
         public virtual User FromUser { get; set; }
         [ForeignKey(nameof(Message.ToId))]
         public virtual User ToUser { get; set;}
+        public string Status { get; set; }
     }
 }

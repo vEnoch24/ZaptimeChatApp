@@ -1,4 +1,4 @@
 ﻿namespace ZaptimeChatApp.Shared.DTOs
 {
-    public record MessageDto(Guid ToUserId, Guid FromUserId, string Message, DateTime SentOn);
+    public record MessageDto(Guid ToUserId, Guid FromUserId, string Message, DateTime SentOn, string Status);
 }
