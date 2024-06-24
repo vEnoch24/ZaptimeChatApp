@@ -2,6 +2,8 @@
 @using Microsoft.AspNetCore.SignalR.Client;
 @using System.Net.Http.Headers
 @using System.IdentityModel.Tokens.Jwt;
+@using System.Timers;
+
 @inject HttpClient Client
 
 @implements IAsyncDisposable
@@ -17,11 +19,20 @@
             <div class="row">
                 <div class="col">
                     <h2>Zaptime Chat</h2>
-                </div>
+                </div>    
+                
+
                 <div class="col">
-                    <button type="button" class="btn btn-warning float-end" @onclick="HandleLogout" >Logout</button>
-                    <label class="float-end me-2 mt-2 topbar-name">Welcome @AuthenticationState.User.Name</label>
                     
+                    <RadzenMenu class="float-end">
+                        <RadzenMenuItem Text="@AuthenticationState.User.Name" Icon="person">
+                            <RadzenMenuItem Text="Logout" Click="HandleLogout" Icon="logout"></RadzenMenuItem>
+                            <RadzenMenuItem Text="Menu" Path="menu" Icon="line_weight"></RadzenMenuItem>
+                        </RadzenMenuItem>
+                    </RadzenMenu>
+
+                    @*<button type="button" class="btn btn-warning float-end" @onclick="HandleLogout" >Logout</button>*@
+                    <label class="float-end me-2 mt-2 topbar-name"> @greeting </label>
                 </div>
             </div>
         </div>
@@ -58,6 +69,10 @@
     private UserDto? selectedUser =  null;
     private MessageDto? newIncomingMessage = null;
 
+    private string greeting;
+    private Timer timer;
+
+    
 
     private async Task<bool> IsTokenExpiredAsync()
     {
@@ -70,9 +85,30 @@
         return false;
     }
 
+    private void TimerElapsed(object sender, ElapsedEventArgs e)
+    {
+        UpdateGreeting();
+    }
+
+    private void UpdateGreeting()
+    {
+        var newGreeting = DateTime.Now.Hour < 12 ? "Good morning" : "Good afternoon";
+        if (greeting != newGreeting)
+        {
+            greeting = newGreeting;
+            InvokeAsync(StateHasChanged); // Notify the UI to re-render
+        }
+    }
+
     protected override async void OnInitialized()
     {
         base.OnInitialized();
+
+        UpdateGreeting();
+
+        timer = new Timer(60000); // Check every minute
+        timer.Elapsed += TimerElapsed;
+        timer.Start();
 
         if(!AuthenticationState.IsAuthenticated)
         {
@@ -245,5 +281,6 @@
         {
             await hubConnection.DisposeAsync();
         }
+        timer?.Dispose();
     }
 }

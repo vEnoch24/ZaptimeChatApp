@@ -29,6 +29,18 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\css\\bootstrap\\main.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\css\\bootstrap\\mysecondstylesheet.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mysecondstylesheet.css"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\css\\bootstrap\\mystylesheet.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mystylesheet.css"
+    },
+    {
       "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
@@ -75,6 +87,26 @@
     {
       "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\js\\sounds.js",
+      "PackagePath": "staticwebassets\\js\\sounds.js"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\js\\sounds\\notification.mp3",
+      "PackagePath": "staticwebassets\\js\\sounds\\notification.mp3"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\js\\video.js",
+      "PackagePath": "staticwebassets\\js\\video.js"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\popper.min.js",
+      "PackagePath": "staticwebassets\\popper.min.js"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ZaptimeChatApp.Client.Microsoft.AspNetCore.StaticWebAssets.props",

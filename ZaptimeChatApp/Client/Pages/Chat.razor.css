@@ -4,7 +4,8 @@
 }
 
 .topbar-name {
-    border: 1px solid #5e10d2;
+    border: 0px solid #5e10d2;
+    font: 2rem;
     padding: 2px 5px;
 }
 

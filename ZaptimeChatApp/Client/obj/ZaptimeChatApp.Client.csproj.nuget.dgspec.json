@@ -66,6 +66,16 @@
               "target": "Package",
               "version": "[6.0.28, )"
             },
+            "Microsoft.TypeScript.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.5.2, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[4.32.9, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[7.5.2, )"
@@ -142,6 +152,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Vonage": {
+              "target": "Package",
+              "version": "[7.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

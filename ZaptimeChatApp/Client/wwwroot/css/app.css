@@ -76,7 +76,7 @@ body {
 }
 
 .bg-main {
-    background-color: var(--main-color) !important;
+    background-color: var(--dark) !important;
 }
 
 .card {

@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNetCore.SignalR.Client
+@using Microsoft.Extensions.Options;
+
+@inject NavigationManager Navigation
+@inject HttpClient Http
+@inject IJSRuntime JS
+@inject IOptions<VonageSetting> vonageSetting;
+
+
+<div class="overlay">
+    <div class="overlay-content">
+        <button @onclick="CloseOverlay">Close</button>
+        <h3>This is the overlay content</h3>
+        <button @onclick="StartCall">Start Call</button>
+        <div id="publisher"></div>
+        <div id="subscriber"></div>
+    </div>
+</div>
+
+
+
+
+@code {
+
+    [Parameter] public EventCallback Close { get; set; }
+
+    private HubConnection hubConnection;
+    private string sessionId;
+    private string token; 
+
+    private Task CloseOverlay()
+    {
+        return Close.InvokeAsync();
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(Navigation.ToAbsoluteUri("/hubs/zaptime-chat"))
+            .Build();
+
+        hubConnection.On<string, string>("ReceiveOffer", async (offer, callerConnectionId) =>
+        {
+            var accept = await JS.InvokeAsync<bool>("confirm", "Do you want to accept the call?");
+            if (accept)
+            {
+                var answer = await JS.InvokeAsync<string>("createAnswer", offer);
+                await hubConnection.InvokeAsync("SendAnswer", callerConnectionId, answer);
+            }
+        });
+
+        hubConnection.On<string>("ReceiveAnswer", async (answer) =>
+        {
+            await JS.InvokeVoidAsync("receiveAnswer", answer);
+        });
+
+        hubConnection.On<string>("ReceiveIceCandidate", async (candidate) =>
+        {
+            await JS.InvokeVoidAsync("receiveIceCandidate", candidate);
+        });
+
+        await hubConnection.StartAsync();
+    }
+
+    private async Task StartCall()
+    {
+        var settings = vonageSetting.Value;
+        var sessionResponse = await Http.GetFromJsonAsync<SessionResponse>("api/video/session");
+        sessionId = sessionResponse.SessionId;
+        var tokenResponse = await Http.GetFromJsonAsync<TokenResponse>($"api/video/token?sessionId={sessionId}");
+        token = tokenResponse.Token;
+
+        await JS.InvokeVoidAsync("initializeSession", settings.ApiKey , sessionId, token);
+    }
+
+    private class SessionResponse
+    {
+        public string SessionId { get; set; }
+    }
+
+    private class TokenResponse
+    {
+        public string Token { get; set; }
+    }
+
+}
