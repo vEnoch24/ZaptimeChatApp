@@ -1,11 +1,13 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 :root {
-    --main-color: #7952b3;
+    /*--main-color: #7952b3;*/
+    --main-color: #378dfc;
 }
 
 html, body{
     font-family:  'Poppins','Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: ;
 }
 
 h1:focus {

@@ -9,7 +9,7 @@
 else
 {
     <div class="flex-grow-1 d-flex flex-column">
-        <div class="header d-flex justify-content-between bg-main">
+        <div class="header d-flex justify-content-between bg-primary">
             <h2 class="text-white m-0 p-1">@SelectedUser.Name</h2>
             <button class="btn btn-danger btn-sm" @onclick="HandleCancelClick"  >x</button>
         </div>
@@ -57,7 +57,7 @@ else
                             <small>
                                 @if(!incoming)
                                 {
-                                    <span>@msg.Status</span>
+                                    <span style="text-align: right;">@msg.Status</span>
                                 }
                             </small>
                         </p>

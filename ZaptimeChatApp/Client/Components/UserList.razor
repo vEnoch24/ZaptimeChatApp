@@ -13,7 +13,8 @@
     {
         @foreach (var user in Users)
         {
-            <li class="list-group-item" @onclick="() => HandleUserClick(user)" style="cursor: pointer; margin-top: 4px">
+            <li class="list-group-item" @onclick="() => HandleUserClick(user)" 
+                style="cursor: pointer; margin-top: 4px; background:#272b30; box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);">
                 @user.Name
                 <span class="badge rounded-pill bg-@(user.IsOnline ? "success" : "danger")">.</span>
             </li>

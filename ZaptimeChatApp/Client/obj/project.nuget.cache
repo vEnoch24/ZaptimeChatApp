@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l2R0lkz4e+vkGt1Siju+2sNePbxpEKukltuHjkGsZ6uNL9dqPF/uf0vtpFbUwhSAPa9O45yp12X5v2pw4Zl9ZA==",
+  "dgSpecHash": "AWNnTLpcg26PNU5F6hHcpNwJPNe45YgbmD8D+y5ewBWps32U6siVzRx4JX+z0z4ofsYk4TkAxvnoLrVzUqs+0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\ZaptimeChatApp.Client.csproj",
   "expectedPackageFiles": [
@@ -48,7 +48,6 @@
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.11\\microsoft.jsinterop.webassembly.6.0.11.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
-    "C:\\Users\\Enoch\\.nuget\\packages\\microsoft.typescript.msbuild\\5.5.2\\microsoft.typescript.msbuild.5.5.2.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\radzen.blazor\\4.32.9\\radzen.blazor.4.32.9.nupkg.sha512",
     "C:\\Users\\Enoch\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",

@@ -224,14 +224,14 @@
       "netstandard.dll": "sha256-kBK\/QJy7\/skP97jqnvXnOFMrhWS8HZ1bsADFK\/gZkyM=",
       "System.Private.CoreLib.dll": "sha256-3webPuyNUXfAFKY5c1tC\/jBVrjZHelBwvXrr1E9VJuk=",
       "ZaptimeChatApp.Shared.dll": "sha256-4vezr7bjW8ZyWBmFM+\/Phz2Spz3ZQOsfkTyVjGDc7qE=",
-      "ZaptimeChatApp.Client.dll": "sha256-THwhOQYdpfyehERwFeLLQpk3T8HqWzQlJnIo2ylFAYY="
+      "ZaptimeChatApp.Client.dll": "sha256-dxJC+U\/9hBECBV0klDUII7jqqgxGKyjLeOeo3Y5caYs="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "ZaptimeChatApp.Shared.pdb": "sha256-9FYPSnAM9O1Qkw+m2mMre7yVfdoUFog2rnTZkX3emyc=",
-      "ZaptimeChatApp.Client.pdb": "sha256-0gtoQosRxn8on++SdOkCBs3cfeP32AJTujqzR0U3\/\/w="
+      "ZaptimeChatApp.Client.pdb": "sha256-7Ymg\/qU3Pt\/nul3KzwLIBMuBcV9BaDlhwWSSfibVi7g="
     },
     "runtime": {
       "dotnet.6.0.13.83ebseycgu.js": "sha256-X\/515F1HEzgsDZdY8BJjt8YUwrWngHGZkMnpClhsrpY=",
