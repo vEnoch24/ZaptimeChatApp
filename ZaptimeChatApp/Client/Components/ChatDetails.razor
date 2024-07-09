@@ -27,7 +27,7 @@ else
             {
                 <div class="header d-flex justify-content-between bg-warning">
                     <span class="text-white">@infoMessage</span>
-                    <button class="btn btn-danger btn-sm" @onclick="() => errorMessage = null">x</button>
+                   
                 </div>
             }
             <ul id="messages-ul" style="padding: 5px">
@@ -75,7 +75,7 @@ else
                 </div>
             </div>*@
 
-            <EditForm Model="newMessage" OnValidSubmit="HandleSendMessageSubmit">
+            <EditForm Model="this" OnValidSubmit="HandleSendMessageSubmit">
                 <div class="">
                     <div class="input-group">
                         <InputText @bind-Value="newMessage" placeholder="Enter message here..." class="form-control" />
@@ -110,7 +110,7 @@ else
     public MessageDto? NewIncomingMessage { get; set; }
 
     private IList<MessageDto> messages = new List<MessageDto>();
-    private string newMessage = "";
+    private string newMessage { get; set; }
     private string? errorMessage;
     private string? infoMessage;
     private Guid previousSelectedUserId = Guid.Empty;
@@ -205,7 +205,7 @@ else
                 var messageDto = new MessageDto(SelectedUser!.Id, AuthenticationState.User.Id, newMessage, DateTime.Now, "Sent");
                 messages.Add(messageDto);
                 scrollToBottom = true;
-                newMessage = "";
+                newMessage = string.Empty;
                 errorMessage = null;
                 infoMessage = null;
             }

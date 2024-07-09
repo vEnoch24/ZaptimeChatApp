@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using ZaptimeChatApp.Server.Data;
 using ZaptimeChatApp.Server.Data.Models;
 using ZaptimeChatApp.Server.Hubs;
 using ZaptimeChatApp.Shared;
 using ZaptimeChatApp.Shared.DTOs;
+using ZaptimeChatApp.Shared.RequestPayload;
 
 namespace ZaptimeChatApp.Server.Controllers
 {
@@ -69,7 +71,70 @@ namespace ZaptimeChatApp.Server.Controllers
             }
 
             return Ok(GenerateToken(user));
-        }        
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody]string UserName)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == UserName);
+            if (user == null)
+            {
+                return BadRequest("User not found");
+            }
+
+            user.PasswordRestToken = CreateRandomToken();
+            user.ResetTokenExpires = DateTime.Now.AddDays(1);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok("You may now reset your password");
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordRequest request)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.PasswordRestToken == request.Token);
+            if (user == null || user.ResetTokenExpires < DateTime.Now)
+            {
+                return BadRequest("Invalid Token or Token Expired");
+            }
+
+            CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
+
+            user.passwordhash = passwordHash;
+            user.passwordSalt = passwordSalt;
+            user.PasswordRestToken = null;
+            user.ResetTokenExpires = null;
+
+            await _dbContext.SaveChangesAsync();
+
+            return Ok("Password successfully reset.");
+        }
+
+        [HttpGet("get-user/{UserName}")]
+        public async Task<ActionResult<UserResetDto>> GetUser(string UserName)
+        {
+            var user = await _dbContext.Users.Where(s => s.UserName == UserName).FirstOrDefaultAsync();
+
+            if(user == null)
+            {
+                return BadRequest("User not found");
+            }
+            
+            var userDto = new UserResetDto()
+            { 
+                Name = user.Name,
+                UserName = user.UserName,
+                PasswordRestToken = user.PasswordRestToken,
+                ResetTokenExpires = user.ResetTokenExpires,
+            };
+
+            return Ok(userDto);
+        }
+
+        private string CreateRandomToken()
+        {
+            return Convert.ToHexString(RandomNumberGenerator.GetBytes(64));
+        }
 
         private AuthResponseDto GenerateToken(User user)
         {

@@ -14,11 +14,14 @@
 
 
 <div class="container-fluid">
-    <div class="card br-0 mt-1">
+    <div class="card br-0 border-0 mt-1">
         <div class="card-header br-0 bg-secondary text-white">
             <div class="row">
                 <div class="col">
-                    <h2>Zaptime Chat</h2>
+                    <div class="header">
+                        <img src="images/zlogo.png" alt="Logo" class="header-logo" />
+                        <h2 class="header-text">aptimeChat</h2>
+                    </div>
                 </div>    
                 
 
@@ -27,11 +30,12 @@
                     <RadzenMenu class="float-end">
                         <RadzenMenuItem Text="@AuthenticationState.User.Name" Icon="person">
                             <RadzenMenuItem Text="Logout" Click="HandleLogout" Icon="logout"></RadzenMenuItem>
-                            <RadzenMenuItem Text="Menu" Path="menu" Icon="line_weight"></RadzenMenuItem>
+                            @*<RadzenMenuItem Text="Menu" Path="menu" Icon="line_weight"></RadzenMenuItem>*@
                         </RadzenMenuItem>
                     </RadzenMenu>
 
                     @*<button type="button" class="btn btn-warning float-end" @onclick="HandleLogout" >Logout</button>*@
+                    
                     <label class="float-end me-2 mt-2 topbar-name"> @greeting </label>
                 </div>
             </div>
@@ -72,7 +76,8 @@
     private string greeting;
     private Timer timer;
 
-    
+
+
 
     private async Task<bool> IsTokenExpiredAsync()
     {
@@ -92,12 +97,26 @@
 
     private void UpdateGreeting()
     {
-        var newGreeting = DateTime.Now.Hour < 12 ? "Good morning" : "Good afternoon";
-        if (greeting != newGreeting)
+        string newGreeting;
+
+        var hour = DateTime.Now.Hour;
+        if (hour < 12)
         {
+            newGreeting = "Good morning";
             greeting = newGreeting;
-            InvokeAsync(StateHasChanged); // Notify the UI to re-render
         }
+        else if (hour < 18)
+        {
+            newGreeting = "Good afternoon";
+            greeting = newGreeting;
+        }
+        else
+        {
+            newGreeting = "Good evening";
+            greeting = newGreeting;
+        }
+
+        InvokeAsync(StateHasChanged);
     }
 
     protected override async void OnInitialized()
@@ -141,6 +160,10 @@
                 loadingUsers = false;
                 await hubConnection.SendAsync(nameof(IZaptimeChatHubServer.SetUserOnline), AuthenticationState.User);
                 StateHasChanged();
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
             }
 
         }
@@ -232,7 +255,7 @@
             if(user is not null)
             {
                 user.IsOnline = true;
-                toastService.ShowInfo($"{user.Name} is online");
+                toastService.ShowSuccess($"{user.Name} is online");
                 StateHasChanged();
             }
         });
@@ -242,7 +265,7 @@
             if (user is not null)
             {
                 user.IsOnline = false;
-                toastService.ShowInfo($"{user.Name} is offline");
+                toastService.ShowError($"{user.Name} is offline");
                 StateHasChanged();
             }
         });

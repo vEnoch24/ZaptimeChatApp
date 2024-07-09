@@ -16,5 +16,7 @@ namespace ZaptimeChatApp.Server.Data.Models
         public string UserName { get; set; }
         public byte[] passwordhash { get; set; } = new byte[32];
         public byte[] passwordSalt { get; set; } = new byte[32];
+        public string? PasswordRestToken { get; set; }
+        public DateTime? ResetTokenExpires { get; set; }
     }
 }

@@ -5,9 +5,8 @@
     --main-color: #378dfc;
 }
 
-html, body{
-    font-family:  'Poppins','Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: ;
+html, body {
+    font-family: 'Poppins','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1:focus {
@@ -70,7 +69,8 @@ a, .btn-link {
     }
 
 body {
-    background-color: #e6e6e6;
+    /*background-color: #e6e6e6;*/
+    background-color: #3a3f44;
 }
 /*border radius*/
 .br-0 {
@@ -79,10 +79,11 @@ body {
 
 .bg-main {
     background-color: var(--dark) !important;
+    /*background-color: var(--main-color) !important;*/
 }
 
 .card {
-    box-shadow: 0px -1px 20px 0px #b69eda;
+    box-shadow: 0px -1px 20px 0px #272b30;
 }
 
 button {

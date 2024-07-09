@@ -1,16 +1,18 @@
 ﻿@page "/"
+@using ZaptimeChatApp.Shared.Shared;
 
 @inject HttpClient HttpClient
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JsRuntime
+@inject UserState UserState
 
 
 <PageTitle>Zaptime Chat - Login</PageTitle>
 
 <div class="container">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-8"></div>
+        <div class="col-8 col-md-6 col-lg-4 col-xl-2">
             
             <EditForm Model="LoginModel" OnValidSubmit="LoginAsync">
                 <div class="card br-0 position-absolute top-50 start-50 translate-middle">
@@ -33,10 +35,14 @@
                             <InputText @bind-Value="LoginModel.Password" DisplayName="Password" type="password" class="form-control" placeholder="Enter Password" />
                             <ValidationMessage For="() => LoginModel.Password" />
                         </div>
+                        <div class="mb-3">
+                            @*<NavLink href="password-reset" @onclick="HandleForgotPassword">Forgot Password</NavLink>*@
+                            <a href="#" @onclick="HandleForgotPasswordClick">Forgot Password</a>
+                        </div>
                     </div>
                     
                     <div class="card-footer">
-                        <div class="mb-3">
+                        <div class="mb-sm-3">
                             <NavLink href="register" class="btn btn-outline-primary float-end">Register</NavLink>
                             @if (_isBusy)
                             {
@@ -108,6 +114,56 @@
             errorMessage = ex.Message;
             _isBusy = false;
         }
+
+    }
+
+    private async Task HandleForgotPasswordClick()
+    {
+        UserState.UserName = LoginModel.UserName;
+
+        if(string.IsNullOrWhiteSpace(LoginModel.UserName))
+        {
+            errorMessage = "Username is required to reset the password";
+        }
+        else
+        {
+            var userResponse = await HttpClient.GetAsync($"api/account/get-user/{UserState.UserName}");
+
+            if(!userResponse.IsSuccessStatusCode)
+            {
+                errorMessage = "User not found";
+            }
+            else
+            {
+                try
+                {
+                    var response = await HttpClient.PostAsJsonAsync($"api/account/forgot-password", UserState.UserName);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        NavigationManager.NavigateTo("/password-reset");
+                    }
+                    else
+                    {
+                        string? errorContent = null;
+                        errorContent = await response.Content.ReadAsStringAsync();
+                        if (string.IsNullOrWhiteSpace(errorContent))
+                        {
+                            errorContent = $"Error {response.StatusCode} - ${response.ReasonPhrase}";
+                        }
+                        errorMessage = errorContent;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    errorMessage = $"An error occured: {ex.Message}";
+                }
+
+            }
+
+            
+        }
+
         
     }
 

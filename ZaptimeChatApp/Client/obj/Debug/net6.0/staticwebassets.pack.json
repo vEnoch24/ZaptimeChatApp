@@ -2081,6 +2081,14 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\images\\zlogo.png",
+      "PackagePath": "staticwebassets\\images\\zlogo.png"
+    },
+    {
+      "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\images\\zlogo2.png",
+      "PackagePath": "staticwebassets\\images\\zlogo2.png"
+    },
+    {
       "Id": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

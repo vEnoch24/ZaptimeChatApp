@@ -5,8 +5,26 @@
 
 .topbar-name[b-dyx6l7izga] {
     border: 0px solid #5e10d2;
-    font: 2rem;
+    font-size: 1rem;
     padding: 2px 5px;
+}
+
+.header[b-dyx6l7izga] {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-logo[b-dyx6l7izga] {
+    width: 50px;
+    height: auto;
+    margin-top: -10px;
+}
+
+.header-text[b-dyx6l7izga] {
+    font-size: 1.5em;
+    margin-left: -15px;
+    margin-top: -4px 
 }
 
 /*element.style{

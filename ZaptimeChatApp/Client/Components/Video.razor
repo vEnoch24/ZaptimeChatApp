@@ -71,7 +71,7 @@
         var tokenResponse = await Http.GetFromJsonAsync<TokenResponse>($"api/video/token?sessionId={sessionId}");
         token = tokenResponse.Token;
 
-        await JS.InvokeVoidAsync("initializeSession", settings.ApiKey , sessionId, token);
+        await JS.InvokeVoidAsync("initializeSession", settings.ApiKey, sessionId, token);
     }
 
     private class SessionResponse

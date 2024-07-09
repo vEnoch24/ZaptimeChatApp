@@ -7,6 +7,7 @@ using System.Text;
 using ZaptimeChatApp.Server;
 using ZaptimeChatApp.Server.Data;
 using ZaptimeChatApp.Server.Hubs;
+using ZaptimeChatApp.Shared.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +49,7 @@ builder.Services.AddTransient<TokenService>();
 builder.Services.AddDbContext<ZaptimeChatDbContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("ZaptimeChatDB")));
 builder.Services.AddSignalR();
 builder.Services.AddBlazoredToast();
+builder.Services.AddSingleton<UserState>();
 
 var app = builder.Build();
 

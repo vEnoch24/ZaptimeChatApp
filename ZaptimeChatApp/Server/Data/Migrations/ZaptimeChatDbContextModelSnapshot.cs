@@ -69,6 +69,12 @@ namespace ZaptimeChatApp.Server.Data.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(max)");
 
+                    b.Property<string>("PasswordRestToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ResetTokenExpires")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(20)
