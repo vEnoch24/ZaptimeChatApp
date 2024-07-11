@@ -936,3 +936,5 @@ C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Client\bin\Debug\net6.
 C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Client\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
 C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Client\obj\Debug\net6.0\build-gz\D4zXuB7d.gz
 C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Client\obj\Debug\net6.0\build-gz\Hv70akVR.gz
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Client\obj\Debug\net6.0\scopedcss\Components\UserList.razor.rz.scp.css
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Client\obj\Debug\net6.0\scopedcss\Components\ChatsList.razor.rz.scp.css

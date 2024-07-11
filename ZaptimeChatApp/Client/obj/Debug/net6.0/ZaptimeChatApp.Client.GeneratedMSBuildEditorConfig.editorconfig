@@ -20,14 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Enoch/source/repos/ZaptimeChatApp/ZaptimeChatApp/Client/Components/ChatsList.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGF0c0xpc3QucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Enoch/source/repos/ZaptimeChatApp/ZaptimeChatApp/Client/Components/UserList.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyTGlzdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Enoch/source/repos/ZaptimeChatApp/ZaptimeChatApp/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -51,6 +43,14 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/Enoch/source/repos/ZaptimeChatApp/ZaptimeChatApp/Client/Components/ChatDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGF0RGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-su9x9oohqu
+
+[C:/Users/Enoch/source/repos/ZaptimeChatApp/ZaptimeChatApp/Client/Components/ChatsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGF0c0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xo5hmx7opf
+
+[C:/Users/Enoch/source/repos/ZaptimeChatApp/ZaptimeChatApp/Client/Components/UserList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-sdgfunfbyi
 
 [C:/Users/Enoch/source/repos/ZaptimeChatApp/ZaptimeChatApp/Client/Components/Video.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xWaWRlby5yYXpvcg==
