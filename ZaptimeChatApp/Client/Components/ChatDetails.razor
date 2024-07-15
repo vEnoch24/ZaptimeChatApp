@@ -1,6 +1,10 @@
 ﻿@using System.Net.Http.Headers;
+@using ZaptimeChatApp.Client.Services;
+
+
 @inject HttpClient Client
 @inject IJSRuntime JsRuntime
+@inject OverlayService OverlayService
 
 @if(SelectedUser is null)
 {
@@ -80,6 +84,7 @@ else
                     <div class="input-group">
                         <InputText @bind-Value="newMessage" placeholder="Enter message here..." class="form-control" />
                         <button class="btn btn-success" type="submit">Send</button>
+                        <button class="btn btn-primary" @onclick="TriggerOverlay">Call</button>
                     </div>
                 </div>
             </EditForm>
@@ -124,6 +129,11 @@ else
     //        await LoadMessageAsync();
     //    }
     //}
+
+    private async Task TriggerOverlay()
+    {
+        await OverlayService.ShowOverlay();
+    }
 
     protected override async Task OnParametersSetAsync()
     {

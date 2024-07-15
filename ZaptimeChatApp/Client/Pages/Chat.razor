@@ -3,6 +3,7 @@
 @using System.Net.Http.Headers
 @using System.IdentityModel.Tokens.Jwt;
 @using System.Timers;
+@using ZaptimeChatApp.Client.Services;
 
 @inject HttpClient Client
 
@@ -11,6 +12,7 @@
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JsRuntime
 @inject IToastService toastService
+@inject OverlayService OverlayService
 
 
 <div class="container-fluid">
@@ -23,10 +25,14 @@
                             <img src="images/zlogo.png" alt="Logo" class="header-logo" />
                             <h2 class="header-text">aptimeChat</h2>
                         </div>
-                    </a>
-                    
-                </div>    
-                
+                    </a> 
+                </div>
+
+                @if (isOverlayVisible)
+                {
+                    <Video Close="CloseOverlay" />
+                }
+
 
                 <div class="col">
                     
@@ -44,6 +50,7 @@
             </div>
         </div>
         <div class="card-body messages-window bg-primary d-flex">
+            
             <div class="row" style="flex: 1">
                 <div class="col-sm-2 col-3">
                     <ChatsList Loading="loadingUsers" Chats="Chats" OnUserSelected="OnUserSelected" />
@@ -78,6 +85,7 @@
 
     private string greeting;
     private Timer timer;
+    private bool isOverlayVisible = false;
 
 
 
@@ -122,11 +130,28 @@
         InvokeAsync(StateHasChanged);
     }
 
+    private async Task ShowOverlay()
+    {
+        isOverlayVisible = true;
+        await InvokeAsync(StateHasChanged);
+        //return Task.CompletedTask;
+    }
+
+    private async Task CloseOverlay()
+    {
+        isOverlayVisible = false;
+        await InvokeAsync(StateHasChanged);
+        //return Task.CompletedTask;
+    }
+
     protected override async void OnInitialized()
     {
         base.OnInitialized();
 
         UpdateGreeting();
+
+        OverlayService.OnShowOverlay += ShowOverlay;
+        OverlayService.OnCloseOverlay += CloseOverlay;
 
         timer = new Timer(60000); // Check every minute
         timer.Elapsed += TimerElapsed;
@@ -308,5 +333,8 @@
             await hubConnection.DisposeAsync();
         }
         timer?.Dispose();
+
+        OverlayService.OnShowOverlay -= ShowOverlay;
+        OverlayService.OnCloseOverlay -= CloseOverlay;
     }
 }

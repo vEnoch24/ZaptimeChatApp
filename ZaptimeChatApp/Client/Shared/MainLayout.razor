@@ -1,5 +1,8 @@
 ﻿@using System.ComponentModel;
+@using ZaptimeChatApp.Client.Services;
 
+
+@inject OverlayService OverlayService
 @implements IDisposable
 @inject IJSRuntime JsRuntime
 @inject NavigationManager NavigationManager
@@ -9,6 +12,7 @@
 
 <CascadingValue Value="AuthenticationState" Name="AuthenticationState">
     <RadzenComponents />
+ 
     <div class="container-fluid">
         @Body
     </div>
@@ -29,10 +33,13 @@
 
 @code {
     public AuthenticationState AuthenticationState { get; set; } = new();
+    
 
 
     protected async override Task OnInitializedAsync()
     {
+        
+
         var authStateJson = await JsRuntime.InvokeAsync<string>("window.getFromStorage", AuthenticationState.AuthStoreKey);
         if(!string.IsNullOrWhiteSpace(authStateJson))
         {
@@ -47,6 +54,8 @@
 
         AuthenticationState.PropertyChanged += AuthenticationStateChanged;
     }
+
+  
 
     private void AuthenticationStateChanged(object? sender, PropertyChangedEventArgs e)
     {
