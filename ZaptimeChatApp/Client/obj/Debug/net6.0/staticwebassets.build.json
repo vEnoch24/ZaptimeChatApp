@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4stZB6O36Wrdj19VvcVxKgiZRu0OMc92teDn7sOO/3E=",
+  "Hash": "k0G8AgfsQydKlx7KWr/OWenH5lxll57FpCZRTjifH74=",
   "Source": "ZaptimeChatApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -17185,6 +17185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\css\\bootstrap\\darktheme.css",
+      "SourceId": "ZaptimeChatApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/bootstrap/darktheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\darktheme.css"
     },
     {
       "Identity": "C:\\Users\\Enoch\\source\\repos\\ZaptimeChatApp\\ZaptimeChatApp\\Client\\wwwroot\\css\\bootstrap\\main.css",

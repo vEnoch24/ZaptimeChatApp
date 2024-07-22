@@ -1,0 +1,19 @@
+﻿:root {
+    --color-primary: #4481eb;
+    --color-success: #ff0060;
+    --color-warning: #f7d060;
+    --color-info-dark: #7d8da1;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radisu-2: 1.2rem;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}

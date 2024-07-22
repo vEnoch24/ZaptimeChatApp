@@ -1,0 +1,12 @@
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\bin\Release\net6.0\ZaptimeChatApp.Shared.deps.json
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\bin\Release\net6.0\ZaptimeChatApp.Shared.dll
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\bin\Release\net6.0\ZaptimeChatApp.Shared.pdb
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ZaptimeChatApp.Shared.csproj.AssemblyReference.cache
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ZaptimeChatApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ZaptimeChatApp.Shared.AssemblyInfoInputs.cache
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ZaptimeChatApp.Shared.AssemblyInfo.cs
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ZaptimeChatApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ZaptimeChatApp.Shared.dll
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\refint\ZaptimeChatApp.Shared.dll
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ZaptimeChatApp.Shared.pdb
+C:\Users\Enoch\source\repos\ZaptimeChatApp\ZaptimeChatApp\Shared\obj\Release\net6.0\ref\ZaptimeChatApp.Shared.dll

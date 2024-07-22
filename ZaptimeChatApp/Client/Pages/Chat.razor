@@ -283,7 +283,7 @@
             if(user is not null)
             {
                 user.IsOnline = true;
-                toastService.ShowSuccess($"{user.Name} is online");
+                toastService.ShowSuccess($"{user.Name} came online");
                 StateHasChanged();
             }
         });
@@ -293,7 +293,7 @@
             if (user is not null)
             {
                 user.IsOnline = false;
-                toastService.ShowError($"{user.Name} is offline");
+                toastService.ShowError($"{user.Name} went offline");
                 StateHasChanged();
             }
         });
