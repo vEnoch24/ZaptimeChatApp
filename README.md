@@ -1,4 +1,3 @@
-name=README.md url=https://github.com/vEnoch24/ZaptimeChatApp/blob/main/README.md
 # ZaptimeChatApp
 
 Instant messaging web app — a full-stack Blazor WebAssembly + ASP.NET Core prototype with SignalR-style real-time messaging interfaces and a component-driven client UI.
